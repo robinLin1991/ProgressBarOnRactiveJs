@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ProgressBar Demo</title>
+    <link href="../Content/bootstrap.min.css" rel="stylesheet">
+    <script src="../Scripts/jquery-2.2.4.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src='http://cdn.ractivejs.org/latest/ractive.min.js'></script>
+
+</head>
+<body>
+    <div id="container">
+        <script id='template' type='text/ractive'>
+            <div class="col-lg-offset-4 col-lg-4">
+                <h3><b>Progress Bar Demo</b></h3>
+                {{#each progressBars}}
+                    <div class="progress" style="min-height: 50px; position: relative;">
+                        <div class="progress-bar {{ colour }}"
+                                role="progressbar"
+                                style="width: {{ value + '%'}}"
+                                aria-valuenow="{{ value }}"
+                                aria-valuemin="0">
+
+                                <span style="position: absolute; 
+                                            display: block; 
+                                            width: 100%; 
+                                            color: black;">
+                                    {{ value }}%
+                                </span>
+                        </div>
+                    </div>
+                {{/each}}
+
+                <div class="btn-group form-inline col-lg-12" role="group" aria-label="...">
+                    
+                    <select value='{{ barSelections }}' class="form-control pull-left">
+                      {{#each progressBars}}
+                        <option value ='{{ id }}'>{{ name }}</option>
+                      {{/each}}
+                    </select>
+
+                    {{#each buttons}}
+                        <button type="button"
+                             class="btn btn-default form-control"
+                             style="margin-left: 10px;"
+                             on-click="calculate:{{ targetBar }},{{ this }}">
+                            {{this > 0? '+' + this: this}}
+                        </button>
+                    {{/each}}
+                    
+                </div>
+                
+            </div>
+        </script>
+    </div>
+
+    <script src="../Scripts/Js/progressBar.js"></script>
+</body>
+</html>

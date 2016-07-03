@@ -1,0 +1,5 @@
+C:\Users\Administrator\Desktop\ProgressBar\ProgressBar\bin\ProgressBar.dll
+C:\Users\Administrator\Desktop\ProgressBar\ProgressBar\bin\ProgressBar.pdb
+C:\Users\Administrator\Desktop\ProgressBar\ProgressBar\obj\Debug\ProgressBar.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\ProgressBar\ProgressBar\obj\Debug\ProgressBar.dll
+C:\Users\Administrator\Desktop\ProgressBar\ProgressBar\obj\Debug\ProgressBar.pdb
